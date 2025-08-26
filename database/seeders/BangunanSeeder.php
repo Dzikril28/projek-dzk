@@ -2,17 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\Barang;
+use App\Models\Bangunan;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class BarangSeeder extends Seeder
+class BangunanSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Barang::factory()->count(10)->create();
+        Bangunan::factory()->count(10)->create();
     }
 }
