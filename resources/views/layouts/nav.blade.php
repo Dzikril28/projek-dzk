@@ -7,8 +7,8 @@
         @auth --}}
             <a href="#user">Users</a>
             <a href="{{ route('tanah.index') }}">Tanah</a>
-            <a href="#bangunan">Bangunan</a>
-            <a href="#ruangan">Ruangan</a>
+            <a href="{{ route('bangunan.index') }}">Bangunan</a>
+            <a href="{{ route('ruangan.index') }}">Ruangan</a>
             <a href="#kategori">Kategori</a>
             <a href="#barang">Barang</a>
         {{-- @endauth --}}

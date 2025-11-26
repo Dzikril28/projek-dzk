@@ -20,14 +20,12 @@
 
         header,
         nav {
-            background: #157347;
             color: #fff;
             padding: 12px 20px;
-            border-bottom: 3px solid #0f5b38;
         }
 
         a {
-            color: #157347;
+            color: #000000ff;
             text-decoration: none;
             font-weight: 600;
         }
@@ -61,10 +59,6 @@
             border-bottom: 1px solid #e6e6e6;
         }
 
-        tr:hover {
-            background: #f0fff7;
-        }
-
         .btn-add {
             background: #198754;
             padding: 8px 14px;
@@ -73,7 +67,7 @@
         }
 
         .btn-add:hover {
-            background: #166f45;
+            background: #06522eff;
         }
     </style>
 
