@@ -14,7 +14,7 @@
     <h1>Home {{ $name }}!</h1>
     <div>
         <p>Selamat datang  DI Web Buatan Dzikril Hadil Jerih Payahnya
-            <a href="http://127.0.0.1:8000/tanah"> Kroco</a>!
+            <a href="http://127.0.0.1:8000/tanah"> Krici</a>!
         </p>
     </div>
 </body>
