@@ -20,12 +20,12 @@
     <tbody>
         @foreach ($items as $item)
         <tr>
-            <td>{{ $loop->iteration }}</td>
-            <td>{{ $item->nama_tanah }}</td>
-            <td>{{ $item->kode_tanah }}</td>
-            <td>{{ $item->luas }}</td>
-            <td>{{ $item->no_sertifikat }}</td>
-            <td>
+            <td align="center">{{ $loop->iteration }}</td>
+            <td align="center">{{ $item->nama_tanah }}</td>
+            <td align="center">{{ $item->kode_tanah }}</td>
+            <td align="center">{{ $item->luas }}</td>
+            <td align="center">{{ $item->no_sertifikat }}</td>
+            <td align="center">
                 <a href="{{ route('tanah.edit', $item->id) }}">Edit</a>
                 <form action="{{ route('tanah.destroy', $item->id) }}" method="post">
                     @csrf

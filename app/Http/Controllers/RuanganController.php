@@ -20,12 +20,12 @@ class RuanganController extends Controller
     public function store(Request $request) {
         $validated = $request->validate([
             'nama_ruangan' => 'required|string',
-             'kode_bangunan' => 'required|string',
-            'tanah_id' => 'required|string',
+            'kode_ruangan' => 'required|string',
+            'bangunan_id'  => 'required|string',
         ]);
 
-        Bangunan::create($validated);
-        return redirect()->route('bangunan.index')->with('success', 'Data Berhasil Ditambahkan!');
+        Ruangan::create($validated);
+        return redirect()->route('ruangan.index')->with('success', 'Data Berhasil Ditambahkan!');
     }
 
     /**
@@ -68,6 +68,6 @@ class RuanganController extends Controller
     {
         Ruangan::destroy($id);
         return redirect()->route('ruangan.index')->with('success', 'Data Berhasil Dihapus!');
-}
+    }
 
 }

@@ -3,6 +3,8 @@
 use App\Http\Controllers\TanahController;
 use App\Http\Controllers\BangunanController;
 use App\Http\Controllers\RuanganController;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\BarangController;
 // use App\Models\Barang; ini dihapus
 use Illuminate\Support\Facades\Route;
 
@@ -38,3 +40,18 @@ Route::post('/ruangan', [RuanganController::class, 'store'])->name('ruangan.stor
 Route::get('/ruangan/{id}/edit', [RuanganController::class, 'edit'])->name('ruangan.edit');
 Route::put('/ruangan/{id}', [RuanganController::class, 'update'])->name('ruangan.update');
 Route::delete('/ruangan/{id}', [RuanganController::class, 'destroy'])->name('ruangan.destroy');
+
+Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori.index');
+Route::get('/kategori/create', [KategoriController::class, 'create'])->name('kategori.create');
+Route::post('/kategori', [KategoriController::class, 'store'])->name('kategori.store');
+Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit'])->name('kategori.edit');
+Route::put('/kategori/{id}', [KategoriController::class, 'update'])->name('kategori.update');
+Route::delete('/kategori/{id}', [KategoriController::class, 'destroy'])->name('kategori.destroy');
+
+Route::get('/barang', [BarangController::class, 'index'])->name('barang.index');
+Route::get('/barang/create', [BarangController::class, 'create'])->name('barang.create');
+Route::post('/barang', [BarangController::class, 'store'])->name('barang.store');
+Route::get('/barang/{id}/edit', [BarangController::class, 'edit'])->name('barang.edit');
+Route::put('/barang/{id}', [BarangController::class, 'update'])->name('barang.update');
+Route::delete('/barang/{id}', [BarangController::class, 'destroy'])->name('barang.destroy');
+

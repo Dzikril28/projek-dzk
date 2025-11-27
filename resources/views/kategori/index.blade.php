@@ -1,24 +1,22 @@
 @extends('layouts.app')
 
-@section('title', 'Data Bangunan')
+@section('title', 'Data Ruangan')
 
 @section('content')
 <div class="card m-4">
     <div class="card-header">
-        <h2 class="card-title text-center">Data Bangunan</h2>
+        <h2 class="card-title text-center">Data Ruangan</h2>
     </div>
     <div class="card-body row">
         <div class="col my-2">
-            <a href="{{ route('bangunan.create') }}" class="btn btn-primary">Tambah</a>
+            <a href="{{ route('kategori.create') }}" class="btn btn-primary">Tambah</a>
         </div>
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
                 <thead class="text-center">
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Nama Bangunan</th>
-                        <th scope="col">Kode Bangunan</th>
-                        <th scope="col">Tanah ID</th>
+                        <th scope="col">Nama Kategori</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
@@ -26,12 +24,10 @@
                     @foreach ($items as $item)
                     <tr>
                         <th scope="row" class="text-center">{{ $loop->iteration }}</th>
-                        <td align="center">{{ $item->nama_bangunan }}</td>
-                        <td align="center">{{ $item->kode_bangunan }}</td>
-                        <td align="center">{{ $item->tanah_id }}</td>
+                        <td align="center">{{ $item->nama_kategori }}</td>
                         <td align="center" class="d-flex gap-2 justify-content-center">
-                            <a href="{{ route('bangunan.edit', $item->id) }}" class="btn btn-success">Edit</a>
-                            <form action="{{ route('bangunan.destroy', $item->id) }}" method="post">
+                            <a href="{{ route('kategori.edit', $item->id) }}" class="btn btn-success">Edit</a>
+                            <form action="{{ route('kategori.destroy', $item->id) }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-outline-danger">Hapus</button>

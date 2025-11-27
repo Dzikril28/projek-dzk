@@ -26,10 +26,10 @@
                     @foreach ($items as $item)
                     <tr>
                         <th scope="row" class="text-center">{{ $loop->iteration }}</th>
-                        <td>{{ $item->nama_ruangan }}</td>
-                        <td>{{ $item->kode_ruangan }}</td>
-                        <td>{{ $item->bangunan_id }}</td>
-                        <td class="d-flex gap-2 justify-content-center">
+                        <td align="center">{{ $item->nama_ruangan }}</td>
+                        <td align="center">{{ $item->kode_ruangan }}</td>
+                        <td align="center">{{ $item->bangunan_id }}</td>
+                        <td align="center" class="d-flex gap-2 justify-content-center">
                             <a href="{{ route('ruangan.edit', $item->id) }}" class="btn btn-success">Edit</a>
                             <form action="{{ route('ruangan.destroy', $item->id) }}" method="post">
                                 @csrf
